@@ -8,12 +8,12 @@ prompt.get('input', function (err, result) {
   
 let count=0;
 
-for (let i = 0; i < num.length; i=i+2) {
-    const element = parseInt(num[i+2]);
-    const element2=parseInt(num[i+4])
-    if (element>element2) {
-        count++;
-    }
+for (let i = 1; i < num.length-1; i++) {
+
+  if (num[i]>num[i-1] && num[i]>num[i+1]) {
+    count++
+  }
+
 }
 console.log(count);
 
